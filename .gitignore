@@ -1,0 +1,3 @@
+hello_rust/guessing_game/target/*.*
+*.lock
+hello_rust/hello_cargo/target/*.*
