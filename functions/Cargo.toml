@@ -1,0 +1,7 @@
+[package]
+name = "functions"
+version = "0.1.0"
+authors = ["Orlando <mmoa33@hotmail.com>"]
+
+[dependencies]
+rand = "0.3.14"
