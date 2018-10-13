@@ -2,3 +2,4 @@ hello_rust/guessing_game/target/*.*
 *.lock
 hello_rust/hello_cargo/target/*.*
 hello_rust/variables/target/*.*
+hello_rust/functions/target/*.*
