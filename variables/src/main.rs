@@ -1,15 +1,22 @@
-// fn main() {
-    
-    // const MAX_POINTS: u32 = 100_000;
-
-    // let mut x=5;
-    // println!("the value of x is {}", x);
-    // x=6;
-    // println!("the value of x is {}", x);
-
-//}
-
 fn main() {
+    const MAX_POINTS: u32 = 100_000;
+
+    let mut s = String::from("hello");
+    s.push_str(", world");
+    println!("{}", s);
+
+    let s1 = String::from("hello");
+    let s2 = s1.clone();
+
+    println!("s1={}, s2 = {}", s1, s2);
+    /*  let mut x=5;
+     println!("the value of x is {}", x);
+     x=6;
+     println!("the value of x is {}", x);
+ */
+}
+
+/* fn main() {
     let guess: u32 = "42".parse().expect("Not a number!");
     let x = 5;
     let y: f32 = 3.0;
@@ -25,3 +32,4 @@ fn main() {
     println!("The 1st value of months is: {}", months[index]); //interesting error message when running it.
 }
 
+ */
