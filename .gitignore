@@ -3,3 +3,4 @@ hello_rust/guessing_game/target/*.*
 hello_rust/hello_cargo/target/*.*
 hello_rust/variables/target/*.*
 hello_rust/functions/target/*.*
+hello_rust/ownership/target/*.*
