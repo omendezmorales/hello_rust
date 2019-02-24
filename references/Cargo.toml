@@ -1,0 +1,11 @@
+[package]
+name = "references"
+version = "0.1.0"
+authors = ["Orlando Méndez <mmoa33@hotmail.com>"]
+edition = "2018"
+
+[dependencies]
+
+[[bin]]
+name = "references"
+path = "main.rs"
