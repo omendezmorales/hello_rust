@@ -14,6 +14,13 @@ struct User {
     height: u32,
 }
 
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+}
+
+
 fn main() {
 
 
@@ -42,15 +49,16 @@ let user3 = User {
 
 let user4 = build_user(String::from("mmoa33@hotmail.com"), String::from("orco"));
 
-println!("User's 1 email: {}", user1.email);
-println!("User's 3 sign_in: {}", user3.sign_in_count);
-println!("User's 4 email: {}, user-id: {}", user4.email, user4.username);
+// println!("User's 1 email: {}", user1.email);
+// println!("User's 3 sign_in: {}", user3.sign_in_count);
+// println!("User's 4 email: {}, user-id: {}", user4.email, user4.username);
 
 let rect1 = Rectangle { width: 30, height: 50 };
 let rect2 = (30,50);
     println!(
-        "The area of the rectangle is {} square pixels.",
-        area(&rect1)
+        "The area of the rectangle is {} square pixels, using method syntax",
+        // area(&rect1)
+        rect1.area()
     );
 
     println!("rect1 is {:?}", rect1);
