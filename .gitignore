@@ -8,3 +8,4 @@ hello_rust/references/target/*.*
 hello_rust/slices/target/*.*
 hello_rust/structures/target/*.*
 
+.vscode/tasks.json
