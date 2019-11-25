@@ -14,12 +14,6 @@ struct User {
     height: u32,
 }
 
-// use std::fmt::Display;
-// impl Display for Rectangle {
-//     // fn bar(&self) {}
-//     fn println(&self){}
-// }
-
 fn main() {
 
 
@@ -53,17 +47,31 @@ println!("User's 3 sign_in: {}", user3.sign_in_count);
 println!("User's 4 email: {}, user-id: {}", user4.email, user4.username);
 
 let rect1 = Rectangle { width: 30, height: 50 };
-
+let rect2 = (30,50);
     println!(
         "The area of the rectangle is {} square pixels.",
         area(&rect1)
     );
+
     println!("rect1 is {:?}", rect1);
+    
+    println!(
+        "The area of the rectangle is {} using a tuple.",
+        area_t(rect2)
+    );
+
+
+}//end of main
+
+fn area_t(dimensions: (u32, u32)) -> u32 {
+    dimensions.0 * dimensions.1
 }
 
 fn area(rectangle: &Rectangle) -> u32 {
     rectangle.width * rectangle.height
 }
+
+
 
 fn build_user(email: String, username: String) -> User {
     User {
