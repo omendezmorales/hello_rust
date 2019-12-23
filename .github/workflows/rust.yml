@@ -9,10 +9,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Build
-      run: >
-           cargo build --verbose --manifest-path functions/Cargo.toml
-           cargo build --verbose --manifest-path ownership/Cargo.toml
+    - name: Build functions
+      run: cargo build --verbose --manifest-path functions/Cargo.toml
+    - name: Build ownership
+      run: cargo build --verbose --manifest-path ownership/Cargo.toml
+      #TODO: how's supposed to work in a multi-line command as shown in 
+      #https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#about-yaml-syntax-for-workflows
 
     # - name: Run tests
     #   run: cargo test --verbose
