@@ -22,17 +22,19 @@ fn main() {
             Coin::Penny => {
                 println!("Lucky penny!");
                 1
-            },
+            }
             Coin::Nickel => {
-                 println!("Lucky Nickel!");
-                 5
-            },
+                println!("Lucky Nickel!");
+                5
+            }
             Coin::Dime => {
                 println!("Lucky Dime!");
-                10},
+                10
+            }
             Coin::Quarter => {
                 println!("Lucky Quarter!");
-                25},
+                25
+            }
         }
     }
 
@@ -60,6 +62,15 @@ fn main() {
     println!("some string: {:?}", some_string);
     println!("printing in ip address in v6 format {}", loopback.address);
     println!("printing in ip address in v4 format {}", home.address);
-    
+
     let a_coin = value_in_cents(Coin::Quarter);
+    let some_u8_value = 2u8;
+    match some_u8_value {
+        1 => println!("one"),
+        3 => println!("three"),
+        5 => println!("five"),
+        7 => println!("seven"),
+        _ => (),
+    }
+    println!("heres what some_u8_value is: {}", some_u8_value);
 }
