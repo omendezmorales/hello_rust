@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Build
-      run: |
+      run: >
            cargo build --verbose --manifest-path functions/Cargo.toml
            cargo build --verbose --manifest-path ownership/Cargo.toml
 
