@@ -7,5 +7,6 @@ hello_rust/ownership/target/*.*
 hello_rust/references/target/*.*
 hello_rust/slices/target/*.*
 hello_rust/structures/target/*.*
+hello_rust/enums/target/*.*
 
 .vscode/tasks.json
