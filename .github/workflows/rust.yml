@@ -9,12 +9,31 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    
     - name: Build functions
       run: cargo build --verbose --manifest-path functions/Cargo.toml
 
     - name: Build ownership
       run: cargo build --verbose --manifest-path ownership/Cargo.toml
       
+    - name: Build enums
+      run: cargo build --verbose --manifest-path enums/Cargo.toml 
+
+    - name: Build guessing_game
+      run: cargo build --verbose --manifest-path guessing_game/Cargo.toml 
+    
+    - name: Build references
+      run: cargo build --verbose --manifest-path references/Cargo.toml 
+    
+    - name: Build slices
+      run: cargo build --verbose --manifest-path slices/Cargo.toml 
+    
+    - name: Build structures
+      run: cargo build --verbose --manifest-path structures/Cargo.toml 
+    
+    - name: Build variables
+      run: cargo build --verbose --manifest-path variables/Cargo.toml       
+
       #TODO: how's supposed to work in a multi-line command as shown in 
       #https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#about-yaml-syntax-for-workflows
 
