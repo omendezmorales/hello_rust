@@ -34,6 +34,9 @@ jobs:
     - name: Build variables
       run: cargo build --verbose --manifest-path variables/Cargo.toml       
 
+    - name: Build restaurant
+      run: cargo build --verbose --manifest-path restaurant/Cargo.toml  
+      
       #TODO: how's supposed to work in a multi-line command as shown in 
       #https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#about-yaml-syntax-for-workflows
 
