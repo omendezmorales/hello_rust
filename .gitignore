@@ -10,4 +10,5 @@ hello_rust/structures/target/*.*
 hello_rust/enums/target/*.*
 hello_rust/modules/target/*.*
 hello_rust/restaurant/target/*.*
+hello_rust/rustre/target/*.*
 .vscode/tasks.json
