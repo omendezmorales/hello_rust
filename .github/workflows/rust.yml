@@ -39,7 +39,11 @@ jobs:
 
     - name: Build rustre
       run: cargo build --verbose --manifest-path rustre/Cargo.toml   
-      #TODO: how's supposed to work in a multi-line command as shown in 
+      
+    - name: Build composing
+      run: cargo build --verbose --manifest-path composing/Cargo.toml     
+
+         #TODO: how's supposed to work in a multi-line command as shown in 
       #https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#about-yaml-syntax-for-workflows
 
     # - name: Run tests

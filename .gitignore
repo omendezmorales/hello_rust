@@ -11,4 +11,5 @@ hello_rust/enums/target/*.*
 hello_rust/modules/target/*.*
 hello_rust/restaurant/target/*.*
 hello_rust/rustre/target/*.*
+hello_rust/composing/target/*.*
 .vscode/tasks.json
