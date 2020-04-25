@@ -1,3 +1,4 @@
+// this is a sample code I've found in http://diego-pacheco.blogspot.com/2020/04/having-fun-with-rust.html
 use std::collections::HashMap;
 use std::io;
 

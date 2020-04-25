@@ -12,4 +12,5 @@ hello_rust/modules/target/*.*
 hello_rust/restaurant/target/*.*
 hello_rust/rustre/target/*.*
 hello_rust/composing/target/*.*
+hello_rust/fun_with_hashes/target/*.*
 .vscode/tasks.json
