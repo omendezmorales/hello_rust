@@ -31,7 +31,10 @@
             // Load input (a binary tree).
             input.advance_to(0);
             for person in 0 .. size {
-                input.insert((person/2, person));
+                input.advance_to(person);
+                input.remove((person/2,person));
+                input.insert((person/3, person));
+
             }
 
         }).expect("Computation terminated abnormally");
