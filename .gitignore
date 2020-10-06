@@ -13,4 +13,5 @@ hello_rust/restaurant/target/*.*
 hello_rust/rustre/target/*.*
 hello_rust/composing/target/*.*
 hello_rust/fun_with_hashes/target/*.*
+hello_rust/testing_diff_dataflow/target/*.*
 .vscode/tasks.json

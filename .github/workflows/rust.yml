@@ -43,10 +43,14 @@ jobs:
     - name: Build composing
       run: cargo build --verbose --manifest-path composing/Cargo.toml     
       
-    - name: Build composing
+    - name: Build fun_with_hashes
       run: cargo build --verbose --manifest-path fun_with_hashes/Cargo.toml
       
-         #TODO: how's supposed to work in a multi-line command as shown in 
+    - name: Build testing_diff_dataflow
+      run: cargo build --verbose --manifest-path testing_diff_dataflow/Cargo.toml
+
+
+      #TODO: how's supposed to work in a multi-line command as shown in 
       #https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#about-yaml-syntax-for-workflows
 
     # - name: Run tests
