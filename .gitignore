@@ -14,4 +14,5 @@ hello_rust/rustre/target/*.*
 hello_rust/composing/target/*.*
 hello_rust/fun_with_hashes/target/*.*
 hello_rust/testing_diff_dataflow/target/*.*
+hello_rust/cargo-serde-example/target/*.*
 .vscode/tasks.json
