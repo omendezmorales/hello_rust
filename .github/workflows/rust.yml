@@ -48,6 +48,10 @@ jobs:
       
     - name: Build testing_diff_dataflow
       run: cargo build --verbose --manifest-path testing_diff_dataflow/Cargo.toml
+    
+    - name: Build collections
+      run: cargo build --verbose --manifest-path collections/Cargo.toml
+    
 
 
       #TODO: how's supposed to work in a multi-line command as shown in 
