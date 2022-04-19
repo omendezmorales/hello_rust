@@ -17,16 +17,30 @@ fn main() {
 }
 
 fn show_strings() {
-    let mut s = String::new();
+    let s = String::new();
 
     let data = "initial contents";
 
     let s = data.to_string();
     println!("{}", s);
     // the method also works on a literal directly:
-    let s = "initial contents".to_string();
-    println!("{}", s);
+    let mut s = "initial contents".to_string();
+    s.push_str(" bar"); //efective appending
+    println!("after updating s : {}", s);
     let s = String::from("initial contents");
     let hello = String::from("Здравствуйте");
     println!("{}, and in UNICODE: {}", s, hello);
+    iterate_string_elements(hello);
+}
+
+fn iterate_string_elements(s: String) {
+    println!("using characters");
+    for c in s.chars() {
+        print!(" {}", c);
+    }
+    println!("\n using bytes");
+
+    for b in s.bytes() {
+        print!(" {}", b);
+    }
 }
