@@ -16,5 +16,6 @@ hello_rust/fun_with_hashes/target/*.*
 hello_rust/testing_diff_dataflow/target/*.*
 hello_rust/cargo-serde-example/target/*.*
 hello_rust/collections/target/*.*
+hello_rust/try_wgpu/target/*.*
 
 .vscode/tasks.json
