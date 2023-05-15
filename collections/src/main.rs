@@ -13,9 +13,10 @@ fn main() {
     }
     println!("seventh element is {}", &v[6]);
     // let does_not_exist = &v[100];
-    let does_not_exist = v.get(100);
+    #[warn(unused_variables)]
+    let _does_not_exist = v.get(100);
     //        println!("The first element is: {}", first)
-    // show_strings();
+    show_strings();
     println!("Calling hash map functions >>");
     
     print_hm(create_hm());
