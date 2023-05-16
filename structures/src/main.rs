@@ -60,9 +60,9 @@ let user3 = User {
 
 let user4 = build_user(String::from("mmoa33@hotmail.com"), String::from("orco"));
 
-// println!("User's 1 email: {}", user1.email);
-// println!("User's 3 sign_in: {}", user3.sign_in_count);
-// println!("User's 4 email: {}, user-id: {}", user4.email, user4.username);
+println!("User's 1 email: {}", user1.email);
+println!("User's 3 sign_in: {}", user3.sign_in_count);
+println!("User's 4 email: {}, user-id: {}", user4.email, user4.username);
 
 let rect1 = Rectangle { width: 30, height: 50 };
 let rect2 = Rectangle { width: 10, height: 40 };
@@ -86,7 +86,10 @@ let rect2_t = (30,50);
         "The area of the rectangle is {} using a tuple.",
         area_t(rect2_t)
     );
-
+    println!(
+        "The area of the rectangle 1  is {}.",
+        area(&rect1)
+    );
 
 }//end of main
 

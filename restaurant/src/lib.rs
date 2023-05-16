@@ -1,11 +1,11 @@
 mod front_of_house;
 
-fn serve_order() {}
+fn _serve_order() {}
 
 mod back_of_house {
     pub struct Breakfast {
         pub toast: String,
-        seasonal_fruit: String,
+        _seasonal_fruit: String,
     }
     pub enum Appetizer {
         Soup,
@@ -15,17 +15,17 @@ mod back_of_house {
         pub fn summer(toast: &str) -> Breakfast {
             Breakfast {
                 toast: String::from(toast),
-                seasonal_fruit: String::from("peaches"),
+                _seasonal_fruit: String::from("peaches"),
             }
         }
     }
     
-    fn fix_incorrect_order() {
-        cook_order();
-        super::serve_order();
+    fn _fix_incorrect_order() {
+        _cook_order();
+        super::_serve_order();
     }
 
-    fn cook_order() {}
+    fn _cook_order() {}
 }
 
 use crate::front_of_house::hosting;
@@ -45,6 +45,6 @@ pub fn eat_at_restaurant() {
     meal.toast = String::from("Wheat");
     println!("I'd like {} toast please", meal.toast);
     // meal.seasonal_fruit = String::from("blueberries");
-    let order1 = back_of_house::Appetizer::Soup;
-    let order2 = back_of_house::Appetizer::Salad;
+    let _order1 = back_of_house::Appetizer::Soup;
+    let _order2 = back_of_house::Appetizer::Salad;
 }

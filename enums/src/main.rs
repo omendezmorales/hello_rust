@@ -1,6 +1,7 @@
 #![allow(unused_variables)]
 
 fn main() {
+    #[derive(Debug)]
     enum IpAddrKind {
         V4,
         V6,
@@ -11,23 +12,24 @@ fn main() {
         address: String,
     }
     enum Coin {
-        Penny,
-        Nickel,
-        Dime,
+        #[warn(dead_code)]
+        _Penny,
+        _Nickel,
+        _Dime,
         Quarter,
     }
 
     fn value_in_cents(coin: Coin) -> u32 {
         match coin {
-            Coin::Penny => {
+            Coin::_Penny => {
                 println!("Lucky penny!");
                 1
             }
-            Coin::Nickel => {
+            Coin::_Nickel => {
                 println!("Lucky Nickel!");
                 5
             }
-            Coin::Dime => {
+            Coin::_Dime => {
                 println!("Lucky Dime!");
                 10
             }
@@ -48,7 +50,8 @@ fn main() {
         address: String::from("::1"),
     };
 
-    enum Message {
+    #[warn(dead_code)]
+    enum _Message {
         Quit,
         Move { x: i32, y: i32 },
         Write(String),
@@ -60,8 +63,14 @@ fn main() {
     let absent_number: Option<i32> = None;
     println!("some number:{:?} ", some_number);
     println!("some string: {:?}", some_string);
-    println!("printing in ip address in v6 format {}", loopback.address);
-    println!("printing in ip address in v4 format {}", home.address);
+    println!(
+        "printing in ip address in {:?} format: {}",
+        home.kind, home.address
+    );
+    println!(
+        "printing in ip address in {:?} format: {} ",
+        loopback.kind, loopback.address
+    );
 
     let a_coin = value_in_cents(Coin::Quarter);
     let some_u8_value = 2u8;

@@ -9,11 +9,12 @@ fn main() {
     let s2 = s1.clone();
 
     println!("s1={}, s2 = {}", s1, s2);
-    /*  let mut x=5;
-     println!("the value of x is {}", x);
-     x=6;
-     println!("the value of x is {}", x);
- */
+    let mut x = 5;
+    println!("the value of x is {}", x);
+    x = 6;
+    println!("the value of x is {}", x);
+    println!("MAX_POINTS is {}", MAX_POINTS);
+
 }
 
 /* fn main() {

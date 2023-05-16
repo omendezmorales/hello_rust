@@ -7,7 +7,8 @@ fn main() {
     //another_function(x, x*x);
     let f = five();
     println!("callings five-> {}", f);
-    //let x = (let y = 6);
+    // let x = (let y = 6);
+    another_function(x, f)
 }
 
 fn five() -> i32 {
