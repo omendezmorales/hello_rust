@@ -55,7 +55,9 @@ jobs:
     - name: Build try_wgpu
       run: cargo build --verbose --manifest-path try_wgpu/Cargo.toml
     
-
+    - name: Build ockam_rv
+      run: cargo build --verbose --manifest-path ockam_rv/Cargo.toml
+    
       #TODO: how's supposed to work in a multi-line command as shown in 
       #https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#about-yaml-syntax-for-workflows
 
