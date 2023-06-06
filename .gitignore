@@ -17,6 +17,4 @@ structures/target/
 testing_diff_dataflow/target/
 try_wgpu/target/
 variables/target/
-ockam_rv/target/
-
 .vscode/tasks.json
