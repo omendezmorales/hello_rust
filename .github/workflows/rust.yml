@@ -57,10 +57,14 @@ jobs:
     
     - name: Build ockam_rv
       run: cargo build --verbose --manifest-path ockam_rv/Cargo.toml
+<<<<<<< HEAD
 
     - name: Build rusty_engine_tutorial
       run: cargo build --verbose --manifest-path rusty_engine_tutorial/Cargo.toml    
       
+=======
+    
+>>>>>>> master
       #TODO: how's supposed to work in a multi-line command as shown in 
       #https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#about-yaml-syntax-for-workflows
 
