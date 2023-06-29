@@ -18,5 +18,6 @@ testing_diff_dataflow/target/
 try_wgpu/target/
 variables/target/
 ockam_rv/target/
+rusty_engine_tutorial/target/
 
 .vscode/tasks.json
