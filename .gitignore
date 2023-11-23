@@ -19,5 +19,6 @@ try_wgpu/target/
 variables/target/
 ockam_rv/target/
 rusty_engine_tutorial/target/
+url-shortener/target
 
 .vscode/tasks.json
