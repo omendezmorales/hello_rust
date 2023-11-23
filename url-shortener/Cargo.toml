@@ -7,3 +7,4 @@ edition = "2021"
 
 [dependencies]
 urlshortener = "3.0.2"
+url = "2.5.0"
