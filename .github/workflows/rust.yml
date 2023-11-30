@@ -60,12 +60,14 @@ jobs:
 
 
     - name: Build rusty_engine_tutorial
-      run: cargo build --verbose --manifest-path rusty_engine_tutorial/Cargo.toml    
+      run: cargo build --verbose --manifest-path rusty_engine_tutorial/Cargo.toml
       
     - name: Build url-shortener
       run: cargo build --verbose --manifest-path url-shortener/Cargo.toml
     
-
+    - name: Build error_handling
+      run: cargo build --verbose --manifest-path error_handling/Cargo.toml
+    
       #TODO: how's supposed to work in a multi-line command as shown in 
       #https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#about-yaml-syntax-for-workflows
 

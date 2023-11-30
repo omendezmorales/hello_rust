@@ -20,5 +20,6 @@ variables/target/
 ockam_rv/target/
 rusty_engine_tutorial/target/
 url-shortener/target
+error_handling/target
 
 .vscode/tasks.json
