@@ -7,7 +7,7 @@ fn main() {
 
     let input_url = &args[1];
     println!("generating short url for {}", input_url.clone());
-    if validate_url(input_url.clone()) {
+    if validate_url(input_url.clone()).is_some() {
         let us = UrlShortener::new().unwrap();
         let short_url = us.generate(input_url, &Provider::IsGd);
         assert!(short_url.is_ok());
@@ -17,9 +17,9 @@ fn main() {
     }
 }
 
-fn validate_url(a_url: String) -> bool {
-    // let issue_list_url = Url::parse(a_url).ok()?;
-    // issue_list_url.scheme() == "https"
-     //  && !issue_list_url.cannot_be_a_base());
-     return true
+fn validate_url(a_url: String) -> Option<bool> {
+    let issue_list_url = Url::parse(&a_url).ok()?;
+     Some(issue_list_url.scheme() == "https"
+       && !issue_list_url.cannot_be_a_base())
+    
 }
