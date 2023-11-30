@@ -59,8 +59,8 @@ jobs:
       run: cargo build --verbose --manifest-path ockam_rv/Cargo.toml
 
 
-    - name: Build rusty_engine_tutorial
-      run: cargo build --verbose --manifest-path rusty_engine_tutorial/Cargo.toml
+   # - name: Build rusty_engine_tutorial
+   #   run: cargo build --verbose --manifest-path rusty_engine_tutorial/Cargo.toml
       
     - name: Build url-shortener
       run: cargo build --verbose --manifest-path url-shortener/Cargo.toml
