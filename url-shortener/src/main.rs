@@ -1,5 +1,5 @@
 use std::env;
-use url::{Host, Url};
+use url::{ Url};
 use urlshortener::{client::UrlShortener, providers::Provider};
 
 fn main() {
