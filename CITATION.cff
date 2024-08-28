@@ -14,9 +14,9 @@ authors:
     orcid: 'https://orcid.org/0000-0002-0993-6409'
 identifiers:
   - type: url
-    value: 'https://gitea.com/omendezmorales/hello_rust'
-    description: new repo on gitea
-repository-code: 'https://gitea.com/omendezmorales/hello_rust'
+    value: 'https://github.com/omendezmorales/hello_rust'
+    description: original repo
+repository-code: 'https://github.com/omendezmorales/hello_rust'
 abstract: >-
   Most exercises/projects come right from
   https://doc.rust-lang.org/stable/book/title-page.html, but
