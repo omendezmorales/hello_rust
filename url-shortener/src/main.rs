@@ -1,6 +1,8 @@
 use std::env;
 use url::{ Url};
 use urlshortener::{client::UrlShortener, providers::Provider};
+use clipboard::{ClipboardProvider,ClipboardContext};
+
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -11,7 +13,10 @@ fn main() {
         let us = UrlShortener::new().unwrap();
         let short_url = us.generate(input_url, &Provider::IsGd);
         assert!(short_url.is_ok());
-        println!("short url generated> {}", short_url.unwrap());
+        println!("short url generated> {}", short_url.clone().unwrap());
+        let mut ctx: ClipboardContext = ClipboardProvider::new().unwrap();
+        ctx.set_contents(short_url.to_owned().expect("REASON")).unwrap();
+        println!("url copied!");
     } else {
         println!("invalid input url {}", input_url);
     }

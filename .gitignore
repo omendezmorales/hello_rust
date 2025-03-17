@@ -21,5 +21,9 @@ ockam_rv/target/
 rusty_engine_tutorial/target/
 url-shortener/target
 error_handling/target
+public_ip_demo/target
+composing/target
+rusty_engine_tutorial/target
 
 .vscode/tasks.json
+.aider*
