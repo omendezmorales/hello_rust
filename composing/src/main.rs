@@ -30,6 +30,4 @@ fn main() {
         "Result of add  ∘ multiply, followed by divide ∘ subtract is {}",
         finally(10)
     );
-    // let finally2 = compose(divide_then_subtract, add_then_multiply);
-    // println!("Result is {}", finally2(10));
 }
