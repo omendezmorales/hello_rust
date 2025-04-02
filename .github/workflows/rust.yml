@@ -4,72 +4,74 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    
-    - name: Build functions
-      run: cargo build --verbose --manifest-path functions/Cargo.toml
+      - uses: actions/checkout@v1
 
-    - name: Build ownership
-      run: cargo build --verbose --manifest-path ownership/Cargo.toml
-      
-    - name: Build enums
-      run: cargo build --verbose --manifest-path enums/Cargo.toml 
+      - name: Build functions
+        run: cargo build --verbose --manifest-path functions/Cargo.toml
 
-    - name: Build guessing_game
-      run: cargo build --verbose --manifest-path guessing_game/Cargo.toml 
-    
-    - name: Build references
-      run: cargo build --verbose --manifest-path references/Cargo.toml 
-    
-    - name: Build slices
-      run: cargo build --verbose --manifest-path slices/Cargo.toml 
-    
-    - name: Build structures
-      run: cargo build --verbose --manifest-path structures/Cargo.toml 
-    
-    - name: Build variables
-      run: cargo build --verbose --manifest-path variables/Cargo.toml       
+      - name: Build ownership
+        run: cargo build --verbose --manifest-path ownership/Cargo.toml
 
-    - name: Build restaurant
-      run: cargo build --verbose --manifest-path restaurant/Cargo.toml  
+      - name: Build enums
+        run: cargo build --verbose --manifest-path enums/Cargo.toml
 
-    - name: Build rustre
-      run: cargo build --verbose --manifest-path rustre/Cargo.toml   
-      
-    - name: Build composing
-      run: cargo build --verbose --manifest-path composing/Cargo.toml     
-      
-    - name: Build fun_with_hashes
-      run: cargo build --verbose --manifest-path fun_with_hashes/Cargo.toml
-      
-    - name: Build testing_diff_dataflow
-      run: cargo build --verbose --manifest-path testing_diff_dataflow/Cargo.toml
-    
-    - name: Build collections
-      run: cargo build --verbose --manifest-path collections/Cargo.toml
-    
-    - name: Build try_wgpu
-      run: cargo build --verbose --manifest-path try_wgpu/Cargo.toml
-    
-    - name: Build ockam_rv
-      run: cargo build --verbose --manifest-path ockam_rv/Cargo.toml
+      - name: Build guessing_game
+        run: cargo build --verbose --manifest-path guessing_game/Cargo.toml
 
+      - name: Build references
+        run: cargo build --verbose --manifest-path references/Cargo.toml
 
-   # - name: Build rusty_engine_tutorial
-   #   run: cargo build --verbose --manifest-path rusty_engine_tutorial/Cargo.toml
-      
-    - name: Build url-shortener
-      run: cargo build --verbose --manifest-path url-shortener/Cargo.toml
-    
-    - name: Build error_handling
-      run: cargo build --verbose --manifest-path error_handling/Cargo.toml
-    
-      #TODO: how's supposed to work in a multi-line command as shown in 
-      #https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#about-yaml-syntax-for-workflows
+      - name: Build slices
+        run: cargo build --verbose --manifest-path slices/Cargo.toml
+
+      - name: Build structures
+        run: cargo build --verbose --manifest-path structures/Cargo.toml
+
+      - name: Build variables
+        run: cargo build --verbose --manifest-path variables/Cargo.toml
+
+      - name: Build restaurant
+        run: cargo build --verbose --manifest-path restaurant/Cargo.toml
+
+      - name: Build rustre
+        run: cargo build --verbose --manifest-path rustre/Cargo.toml
+
+      - name: Build composing
+        run: cargo build --verbose --manifest-path composing/Cargo.toml
+
+      - name: Build fun_with_hashes
+        run: cargo build --verbose --manifest-path fun_with_hashes/Cargo.toml
+
+      - name: Build testing_diff_dataflow
+        run: cargo build --verbose --manifest-path testing_diff_dataflow/Cargo.toml
+
+      - name: Build collections
+        run: cargo build --verbose --manifest-path collections/Cargo.toml
+
+      - name: Build try_wgpu
+        run: cargo build --verbose --manifest-path try_wgpu/Cargo.toml
+
+      - name: Build ockam_rv
+        run: cargo build --verbose --manifest-path ockam_rv/Cargo.toml
+
+      # - name: Build rusty_engine_tutorial
+      #   run: cargo build --verbose --manifest-path rusty_engine_tutorial/Cargo.toml
+
+      - name: Build url-shortener
+        run: cargo build --verbose --manifest-path url-shortener/Cargo.toml
+
+      - name: Build error_handling
+        run: cargo build --verbose --manifest-path error_handling/Cargo.toml
+
+      - name: Build composing
+        run:
+          cargo build --verbose --manifest-path composing/Cargo.toml
+
+          #TODO: how's supposed to work in a multi-line command as shown in
+        #https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#about-yaml-syntax-for-workflows
 
     # - name: Run tests
     #   run: cargo test --verbose
