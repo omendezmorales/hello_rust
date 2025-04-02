@@ -60,6 +60,9 @@ jobs:
       # - name: Build rusty_engine_tutorial
       #   run: cargo build --verbose --manifest-path rusty_engine_tutorial/Cargo.toml
 
+      - name: Install dependencies #fix so the linker finds the right xcb libs
+        run: sudo apt-get install -y libxcb1-dev libxcb-render0-dev libxcb-shape0-dev libxcb-xfixes0-dev
+
       - name: Build url-shortener
         run: cargo build --verbose --manifest-path url-shortener/Cargo.toml
 
