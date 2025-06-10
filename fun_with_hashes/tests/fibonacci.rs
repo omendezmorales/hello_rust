@@ -1,4 +1,7 @@
-use fun_with_hashes::solution;
+extern crate fun_with_hashes;
+use fun_with_hashes::fibonacci;
+use fun_with_hashes::solution; // Import the public fibonacci function
+use std::collections::HashMap;
 
 #[test]
 fn test_fibonacci_small_numbers() {
