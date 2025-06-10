@@ -23,12 +23,10 @@ fn main() {
     println!("Calling hash map update function >>");
     update_hm();
     println!("Updating a Value Based on the Old Value");
-    update_hm_for_wordcount();
-}
-fn update_hm_for_wordcount(){
-// TODO: LInk this code with how to read a file -see Section 12.2 in book-,
-//  and play with the idea of setting up a WordCloud in Rust
     let text = "hello world wonderful world";
+    let counts = update_hm_for_wordcount(text);
+    println!("Word counts: {:?}", counts);
+}
 
     let mut map = HashMap::new();
 
@@ -38,7 +36,6 @@ fn update_hm_for_wordcount(){
     }
 
     println!("{:?}", map);
-}
 
 fn update_hm(){
     let mut scores = HashMap::new();
