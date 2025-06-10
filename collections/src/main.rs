@@ -1,3 +1,4 @@
+use collections::update_hm_for_wordcount;
 use std::collections::HashMap;
 
 fn main() {
@@ -23,8 +24,9 @@ fn main() {
     print_hm(create_hm());
     println!("Updating a Value Based on the Old Value");
     update_hm();
-    #[warn(unused_variables)]
-    let _text = "hello world wonderful world";
+    let text = "hello! world; wonderful? world";
+    let counts = update_hm_for_wordcount(text);
+    println!("word counts: {:?}", counts);
 }
 
 fn update_hm() {
