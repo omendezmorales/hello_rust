@@ -1,3 +1,4 @@
+use collections::update_hm_for_wordcount;
 use std::collections::HashMap;
 
 fn main() {
@@ -17,27 +18,18 @@ fn main() {
     let _does_not_exist = v.get(100);
     //        println!("The first element is: {}", first)
     show_strings();
-    println!("Calling hash map functions >>");
-    
+    println!("\nCalling hash map functions >>");
+
+    println!("Calling hash map create function >>");
     print_hm(create_hm());
-    println!("Calling hash map update function >>");
-    update_hm();
     println!("Updating a Value Based on the Old Value");
-    let text = "hello world wonderful world";
+    update_hm();
+    let text = "hello! world; wonderful? world";
     let counts = update_hm_for_wordcount(text);
-    println!("Word counts: {:?}", counts);
+    println!("word counts: {:?}", counts);
 }
 
-    let mut map = HashMap::new();
-
-    for word in text.split_whitespace() {
-        let count = map.entry(word).or_insert(0);
-        *count += 1;
-    }
-
-    println!("{:?}", map);
-
-fn update_hm(){
+fn update_hm() {
     let mut scores = HashMap::new();
 
     scores.insert(String::from("Blue"), 10);
@@ -80,7 +72,7 @@ fn iterate_string_elements(s: String) {
     }
 }
 
-fn create_hm()-> HashMap<String, i32> {
+fn create_hm() -> HashMap<String, i32> {
     let mut scores = HashMap::new();
 
     scores.insert(String::from("Blue"), 10);
@@ -91,7 +83,7 @@ fn create_hm()-> HashMap<String, i32> {
     return scores;
 }
 
-fn print_hm(scores: HashMap<String, i32>){
+fn print_hm(scores: HashMap<String, i32>) {
     for (key, value) in &scores {
         println!("{}: {}", key, value);
     }

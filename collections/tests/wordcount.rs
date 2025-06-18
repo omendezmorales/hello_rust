@@ -17,7 +17,7 @@ fn test_word_count_empty() {
 
 #[test]
 fn test_word_count_punctuation() {
-    let text = "hello, world! hello?";
+    let text = "hello; world! hello?";
     let counts = update_hm_for_wordcount(text);
     assert_eq!(counts["hello"], 2);
     assert_eq!(counts["world"], 1);
