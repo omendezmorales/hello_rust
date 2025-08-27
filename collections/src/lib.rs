@@ -4,7 +4,7 @@ pub fn update_hm_for_wordcount(text: &str) -> HashMap<&str, u32> {
     let mut map = HashMap::new();
     text.split(|c: char| {
         match c {
-            '?' | '!' | ';' => true, // Punctuation delimiters
+            '?' | '!'  | ',' | ';'=> true, // Punctuation delimiters
             _ => c.is_whitespace(),  // Whitespace delimiters
         }
     })
