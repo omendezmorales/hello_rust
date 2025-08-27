@@ -1,4 +1,8 @@
-mod front_of_house;
+mod front_of_house {
+    pub mod hosting {
+        pub fn add_to_waitlist() {}
+    }
+}
 
 fn _serve_order() {}
 
@@ -19,7 +23,7 @@ mod back_of_house {
             }
         }
     }
-    
+
     fn _fix_incorrect_order() {
         _cook_order();
         super::_serve_order();
@@ -28,23 +32,23 @@ mod back_of_house {
     fn _cook_order() {}
 }
 
-use crate::front_of_house::hosting;
+mod customer {
+    use crate::back_of_house;
+    pub fn eat_at_restaurant() {
+        use crate::front_of_house::hosting; // Absolute path
+        hosting::add_to_waitlist();
 
-pub fn eat_at_restaurant() {
-    // Absolute path
-   hosting::add_to_waitlist();
+        // Relative path
+        hosting::add_to_waitlist();
+        hosting::add_to_waitlist();
 
-    // Relative path
-   hosting::add_to_waitlist();
-   hosting::add_to_waitlist();
-    
-
-    // Order a breakfast in the summer with Rye toast
-    let mut meal = back_of_house::Breakfast::summer("Rye");
-    // Change our mind about what bread we'd like
-    meal.toast = String::from("Wheat");
-    println!("I'd like {} toast please", meal.toast);
-    // meal.seasonal_fruit = String::from("blueberries");
-    let _order1 = back_of_house::Appetizer::Soup;
-    let _order2 = back_of_house::Appetizer::Salad;
+        // Order a breakfast in the summer with Rye toast
+        let mut meal = back_of_house::Breakfast::summer("Rye");
+        // Change our mind about what bread we'd like
+        meal.toast = String::from("Wheat");
+        println!("I'd like {} toast please", meal.toast);
+        // meal.seasonal_fruit = String::from("blueberries");
+        let _order1 = back_of_house::Appetizer::Soup; // This line was causing the error
+        let _order2 = back_of_house::Appetizer::Salad; // This line was causing the error
+    }
 }
