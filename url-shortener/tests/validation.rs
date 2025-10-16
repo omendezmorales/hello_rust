@@ -1,4 +1,4 @@
-use urlshortener::validate_url;
+use urlshortener::validation::validate_url;
 
 #[test]
 fn test_valid_urls() {
