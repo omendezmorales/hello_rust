@@ -13,7 +13,7 @@ fn main() {
         let us = UrlShortener::new().unwrap();
         let short_url = us.generate(input_url, &Provider::IsGd);
         assert!(short_url.is_ok());
-        println!("short url generated> {}", short_url.clone().unwrap());
+        println!("short url generated> {:?}", short_url.clone().unwrap());
         let mut ctx: ClipboardContext = ClipboardProvider::new().unwrap();
         ctx.set_contents(short_url.to_owned().expect("REASON")).unwrap();
         println!("url copied!");
