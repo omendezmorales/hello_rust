@@ -6,6 +6,6 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-urlshortener = "3.0.2"
+urlshortener = "3.2.1"
 url = "2.5.0"
 clipboard = "0.5.0"
