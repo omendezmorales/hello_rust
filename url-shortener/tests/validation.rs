@@ -1,4 +1,4 @@
-use urlshortener::validation::validate_url;
+use crate::validate_url;
 
 #[test]
 fn test_valid_urls() {
