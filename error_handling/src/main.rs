@@ -1,4 +1,3 @@
-use core::error;
 use std::{
     fs::{self, File},
     path::Path,
@@ -34,7 +33,7 @@ fn open_file2() {
     use std::fs::File;
     use std::io::ErrorKind;
     let file_name = "hello.txt";
-    let greeting_file = File::open(file_name).unwrap_or_else(|error| {
+    let _greeting_file = File::open(file_name).unwrap_or_else(|error| {
         if error.kind() == ErrorKind::NotFound {
             File::create(file_name).unwrap_or_else(|error| {
                 panic!("Problem creating the file {} : {error:?}", file_name);
