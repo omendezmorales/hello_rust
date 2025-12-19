@@ -73,8 +73,12 @@ jobs:
         run: cargo build --verbose --manifest-path composing/Cargo.toml
 
       - name: Build threads_demo
+        run: cargo build --verbose --manifest-path threads_demo/Cargo.toml
+
+      - name: Build generics_time
         run:
-          cargo build --verbose --manifest-path threads_demo/Cargo.toml
+          cargo build --verbose --manifest-path generics_time/Cargo.toml
+
           #TODO: how's supposed to work in a multi-line command as shown in
         #https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#about-yaml-syntax-for-workflows
 

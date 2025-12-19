@@ -15,6 +15,9 @@ struct Point<X1, Y1> {
     y: Y1,
 }
 
+// The purpose of this example is to demonstrate a situation in which some generic parameters are declared with impl and some are declared with the method definition.
+// Here, the generic parameters X1 and Y1 are declared after impl because they go with the struct definition.
+// The generic parameters X2 and Y2 are declared after fn mixup because they’re only relevant to the method.
 impl<X1, Y1> Point<X1, Y1> {
     fn mixup<X2, Y2>(self, other: Point<X2, Y2>) -> Point<X1, Y2> {
         Point {
