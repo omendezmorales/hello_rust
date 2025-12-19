@@ -25,6 +25,7 @@ public_ip_demo/target
 composing/target
 rusty_engine_tutorial/target
 threads_demo/target
+generics_time/target
 
 .vscode/tasks.json
 .aider*
