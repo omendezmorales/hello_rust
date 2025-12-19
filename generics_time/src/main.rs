@@ -9,6 +9,10 @@ fn largest<T: std::cmp::PartialOrd>(list: &[T]) -> &T {
 
     largest
 }
+struct Point<T, U> {
+    x: T,
+    y: U,
+}
 
 fn main() {
     let number_list = vec![34, 50, 25, 100, 65];
@@ -20,4 +24,9 @@ fn main() {
 
     let result = largest(&char_list);
     println!("The largest character is {result}");
+
+    //calling structure generics in different combinations
+    let _both_integer = Point { x: 5, y: 10 };
+    let _both_float = Point { x: 1.0, y: 4.0 };
+    let _integer_and_float = Point { x: 5, y: 4.0 };
 }
