@@ -27,6 +27,7 @@ rusty_engine_tutorial/target
 threads_demo/target
 generics_time/target
 trait_sample/target
+lifetimes/target
 
 .vscode/tasks.json
 .aider*

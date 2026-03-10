@@ -78,11 +78,16 @@ jobs:
       - name: Build generics_time
         run:
           cargo build --verbose --manifest-path generics_time/Cargo.toml
-
+      
       - name: Build trait_sample 
         run:
           cargo build --verbose --manifest-path trait_sample/Cargo.toml
-          #TODO: how's supposed to work in a multi-line command as shown in
+     
+     - name: Build lifetimes
+        run:
+          cargo build --verbose --manifest-path lifetimes/Cargo.toml
+
+        #TODO: how's supposed to work in a multi-line command as shown in
         #https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#about-yaml-syntax-for-workflows
 
     # - name: Run tests
