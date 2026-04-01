@@ -28,6 +28,7 @@ threads_demo/target
 generics_time/target
 trait_sample/target
 lifetimes/target
+adder/target
 
 .vscode/tasks.json
 .aider*
