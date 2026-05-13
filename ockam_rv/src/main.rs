@@ -3,7 +3,7 @@
 use ockam::*;
 
 #[ockam::node]
-async fn main(mut ctx: Context) -> Result<()> {
+async fn main(ctx: Context) -> Result<()> {
     println!("Hello, RISC-V!");
-    ctx.stop().await
+    ctx.shutdown_node().await
 }
